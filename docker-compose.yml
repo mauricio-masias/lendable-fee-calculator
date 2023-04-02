@@ -13,6 +13,7 @@ services:
       - php-fpm
   php-fpm:
     container_name: php8
-    image: php:8-fpm
+    #image: php:8-fpm
+    build: ./docker
     volumes:
       - .:/var/www/html
