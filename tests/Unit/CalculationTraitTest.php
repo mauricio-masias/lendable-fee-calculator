@@ -7,7 +7,7 @@ use App\Repositories\FeeBreakpointRepository;
 use App\Traits\CalculateFee;
 use PHPUnit\Framework\TestCase;
 
-class CalculationClassTest extends TestCase
+class CalculationTraitTest extends TestCase
 {
     public function test_calculation_min_amount_trait(): void
     {

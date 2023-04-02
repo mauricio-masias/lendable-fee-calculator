@@ -31,7 +31,7 @@ trait CalculateFee
     }
 
     /**
-     * @return float [ Fee = y1 + (y2-y1) * (($amount-x1) / (x2-x1)) ]
+     * @return float 
      */
     private function getFeeInterpolateLinearly(array $bounds, float $amount): float
     {
@@ -39,23 +39,20 @@ trait CalculateFee
         $x2         = 0; // top amount
         $y1         = 0; // low fee
         $y2         = 0; // top fee
-        $prevAmount = 0;
-        $prevFee    = 0;
 
         foreach ($bounds as $boundAmount => $boundFee) {
 
             if ($amount < $boundAmount) {
-                $x1 = $prevAmount;
                 $x2 = $boundAmount;
-                $y1 = $prevFee;
                 $y2 = $boundFee;
                 break;
             }
 
-            $prevAmount = $boundAmount;
-            $prevFee    = $boundFee;
+            $x1 = $boundAmount;
+            $y1 = $boundFee;
         }
 
+        // [ Fee = y1 + (y2-y1) * (($amount-x1) / (x2-x1)) ]
         return (float) $y1 + ($y2 - $y1) * (($amount - $x1) / ($x2 - $x1));
     }
 
