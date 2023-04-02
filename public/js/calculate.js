@@ -54,6 +54,9 @@ $(function() {
     $('.trigger').on('click', function() {
         if (validateAmount()) {
             $('.spinner').removeClass('hide');
+            if (!$('.fee-result').hasClass('hide')) {
+                $('.fee-result').addClass('hide');
+            }
             calculateFee($('#amount').val(), $('#term').val());
         } else {
             showError(error);

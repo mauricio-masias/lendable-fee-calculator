@@ -58,7 +58,7 @@
                                 <div id="fee_error" class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                 </div>
                                 <div class="mt-4 text-gray-500 dark:text-gray-400 text-xl leading-relaxed">
-                                    <div class="spinner hide"></div>
+                                    <div class="spinner hide"><div></div><div></div></div>
                                     <div class="fee-result hide">Fee: £<strong id="fee_result"></strong></div>
                                 </div>
                                 
