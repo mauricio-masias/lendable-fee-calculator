@@ -56,7 +56,7 @@ class LoanApplicationModel
 
     /**
      * @return bool
-     * Application validation.
+     * Amount decimal check.
      */
     private function isDecimal(float $val): bool
     {

@@ -4,7 +4,9 @@ namespace App\Repositories;
 
 class FeeBreakpointRepository
 {
-
+    /**
+     * @return array<int,array<int,int>>
+     */
     public function getBreakpoints(): array
     {
         return [
@@ -14,6 +16,9 @@ class FeeBreakpointRepository
 
     }
 
+    /**
+     * @return array<int,int>
+     */
     private function getFixTerm12(): array
     {
         return [
@@ -40,6 +45,9 @@ class FeeBreakpointRepository
         ];
     }
 
+    /**
+     * @return array<int,int>
+     */
     private function getFixTerm24(): array
     {
         return [

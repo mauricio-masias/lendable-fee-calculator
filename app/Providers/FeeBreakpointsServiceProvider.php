@@ -22,6 +22,5 @@ class FeeBreakpointsServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
     }
 }

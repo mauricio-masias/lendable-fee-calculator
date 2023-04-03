@@ -15,7 +15,7 @@ trait CalculateFee
     public function calculate(
         LoanApplicationModel $application,
         FeeBreakpointRepository $feeRepo
-    ): float {
+    ): float{
         $breakpoints = $feeRepo->getBreakpoints();
 
         $bounds = $breakpoints[$application->getTerm()];
@@ -31,14 +31,14 @@ trait CalculateFee
     }
 
     /**
-     * @return float 
+     * @return float
      */
     private function getFeeInterpolateLinearly(array $bounds, float $amount): float
     {
-        $x1         = 0; // low amount
-        $x2         = 0; // top amount
-        $y1         = 0; // low fee
-        $y2         = 0; // top fee
+        $x1 = 0; // low amount
+        $x2 = 0; // top amount
+        $y1 = 0; // low fee
+        $y2 = 0; // top fee
 
         foreach ($bounds as $boundAmount => $boundFee) {
 
