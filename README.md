@@ -7,8 +7,9 @@ App launches an input form for terms and loan amount
 When submitting, results are ajax shown on right panel and logged in lower panel.
 
 To launch, from root:  
-- composer install
 - docker compose up -d
+- docker exec -ti php8 composer install
+- mv .env_example .env
 - on browser: http://localhost:8080/
 
 ## Controllers:
